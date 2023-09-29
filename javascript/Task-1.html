@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mouse hover task</title>
+</head>
+<body>
+ <center><img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage() "src="images/ballon.jpeg"width="300";></center>
+ <script type="text/javascript">
+ 	function setNewImage(){
+      document.getElementById("img1").src="images/ballon2.jpeg"
+ 	}
+ 	function setOldImage(){
+ 		document.getElementById("img1").src="images/ballon.jpeg"
+ 	}
+ </script>
+</body>
+</html>

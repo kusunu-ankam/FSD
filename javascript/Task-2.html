@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		/*body {
+		  display: flex;
+		  justify-content: center;
+		  margin-top: 100px;
+		}*/
+
+		.nums_container, .radio_btns, p{
+			font-size: 20px;
+		  	display: flex; /* Display the radio buttons in a row */
+		  	justify-content: center; /* Center the radio buttons horizontally */
+		}
+
+		p{
+			margin-top: 100px;
+			font-weight: bolder;
+			font-size: 20px;
+		}
+		text{
+			margin: 0px 6px 5px 5px;
+		}
+		button{
+            font-size: 20px;
+			border-radius: 9px;
+			padding: 8px 15px 8px 15px;
+			background-color: #30D803;
+			color: white;
+			border: 0px;
+			margin: 10px 0px 0px 725px;
+		}
+		#output_id{
+			height: 50px;
+			width: 100px;
+/*			background-color: #f1f1f1;*/
+			margin: 20px 0px 0px 714px;
+		}
+	</style>
+	<title>Lucky Game</title>
+</head>
+<body>
+	<p>Select your number</p>
+  <div class="nums_container">
+    <text>1</text>
+    <text>2</text>
+    <text>3</text>
+    <text>4</text>
+    <text>5</text>
+  </div>
+  <div class="radio_btns">
+  	<input type="radio" name="number" id="rd_btn1" value="1"> 
+  	<input type="radio" name="number" id="rd_btn2" value="2"> 
+  	<input type="radio" name="number" id="rd_btn3" value="3"> 
+  	<input type="radio" name="number" id="rd_btn4" value="4"> 
+  	<input type="radio" name="number" id="rd_btn5" value="5"> 
+</div>
+<button id="play_btn" class="btn btn-primary" onclick="selected()">Start</button><br>
+<input id="dis_box" style="margin: 10px 0px 0px 675px;">
+<p id="output_id"></p>
+<script>
+    function getRandomNumber(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+  // const minRange = 1; // Minimum value of the range
+  // const maxRange = 5; // Maximum value of the range
+  // const randomNum = getRandomNumber(1, 5);
+  // console.log(`Random number between ${minRange} and ${maxRange}: ${randomNum}`);
+  function selected() {
+      var sel_num = document.querySelector('input[name="number"]:checked');
+      var generatedNum = getRandomNumber(1, 5);
+      document.getElementById('dis_box').value = generatedNum;
+      if (parseInt(sel_num.value) == generatedNum) {
+          // alert("You Won")
+          document.getElementById('output_id').innerText = 'You Won'
+      } else {
+          // alert("You lost");
+          document.getElementById('output_id').innerText = 'You Lost'
+    	}
+    	console.log(parseInt(sel_num.value), generatedNum)
+    }
+  </script>
+
+
+
+</body>
+</html>

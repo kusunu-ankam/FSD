@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let re=/swamy/
+        // let output=re.test('kusunu khandeswara swamy')
+        // console.log(output)
+        // //case sensitive
+        // let re1=/swamy/i
+        // let output1=re1.test('kusunu khandeswara Swamy')
+        // console.log(output1)
+        // let re2=/^k/i
+        // let output2=re2.test('kjd')
+        // console.log(output2)
+        // let a ='batch'
+        // re11=new RegExp('{a}')
+        // output11=re11.test('fullstack batch')
+        // re22=/batch/g
+        // output22=re22.exec('fullstack batch')
+        // console.log(output22.index)
+        let s=/^[0-9]{10}/
+        output=s.test('93924276969000146009')//exceed range without $
+        console.log(output)
+        let s1=/^[0-9]{10}$/
+        output1=s1.test('93924276969000146009')// range with $
+        console.log(output1)
+    </script>
+</body>
+</html>

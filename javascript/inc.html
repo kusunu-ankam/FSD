@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="incby1()">inc</button>
+    <button onclick="decby1()">dec</button>
+    <p>Output</p>
+    <div id="o_id"></div>
+    <script>
+        var i =1;
+        function incby1() {
+            if (i<6) {
+                var res=i++;
+                document.getElementById("o_id").innerText =res
+            }
+            
+        }
+        function decby1() {
+            if (i>0) {
+                var res=--i;
+                document.getElementById("o_id").innerText =res
+            }
+        }
+    </script>
+</body>
+</html>

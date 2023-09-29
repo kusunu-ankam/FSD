@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn_id">sumbit</button> -->
+    <button onclick="hidediv()">Hide</button>
+    <button onclick="showdiv()">Show</button>
+    <div id="div">Swamy</div>
+    <!-- <span id="sp_id"><button>submit</button></span> -->
+    <!-- <script>
+        // 2nd way
+        // let btn=document.getElementById("btn_id")
+        // btn.onclick=function(){
+        //    alert("hi")
+        //     document.body.style.background="green"
+        // }
+        // 3rd way
+        let btn=document.getElementById('btn_id');
+        btn.addEventListener('click',function() {
+       
+            alert('testing...')
+            document.body.style.background="orange";
+            // document.getElementById('sp_id').style.display='none'
+        }
+        ) -->
+       <script>
+         function hidediv() {
+            document.getElementById("div").style.display="none"
+         }
+         function showdiv() {
+            document.getElementById("div").style.display="block"
+         }
+       </script>
+
+           
+    </script>
+</body>
+</html>

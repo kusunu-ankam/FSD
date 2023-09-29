@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="" cellspacing="0">
+        <tr> 
+            <td>k</td>
+            <td>u</td>
+            <td>s</td>
+            <td>&nbsp;</td>
+            <td>u</td>
+            <td>n</td>
+            <td>u</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>-7</td>
+            <td>-6</td>
+            <td>-5</td>
+            <td>-4</td>
+            <td>-3</td>
+            <td>-2</td>
+            <td>-1</td>
+        </tr>
+    </table>
+    <script>
+        function getstr(str){
+            document.write("<b>"+str+"</b><br>")
+        }
+        let k="kusunu"
+        getstr("original string ="+k)
+        getstr("string length ="+k.length)
+        getstr("getting the charcter in given index ="+k.charAt(2))
+        getstr("getting the index in given charcter ="+k.indexOf('s'))
+        getstr("getting the last index in given string="+k.lastIndexOf('u'))
+        getstr("convert into uppercase ="+k.toUpperCase())
+        let str2="swamy"
+        getstr("Concate of string="+k.concat( str2))
+        let str3="balla"
+        getstr("Concate of string="+k.concat( str2,str3))
+        let str4="    kjkdj      "
+        getstr("trim() method ="+str4.trim())//used to remove the spaces
+        console.log(str3.split(""))//convert into array
+        let str5="kusunu&kha,swamy"
+        console.log(str5.split("&"))
+        let str6="khandeswara"
+        console.log(str6.startsWith("k"))
+        console.log(str6.startsWith("i"))
+        console.log(str6.endsWith("a"))
+        console.log(str6.endsWith("b"))
+        getstr("slice of string ="+k.slice(-5,-1))
+        getstr("slice of string ="+k.slice(1,4,2))
+        getstr("includes of string="+k.includes('su'))//if substring is in string  present or not
+        getstr("ASCII value ="+k.charCodeAt('t'))
+        getstr("substring of string ="+k.substring(1,5))
+        getstr("substring of string ="+k.substring(5,1))
+        getstr("substring of string ="+k.substring(1))
+        getstr("substring of string ="+k.substring(-5,-1))//negative indices not applicable in substring
+        getstr(k.substr(0,5))
+        getstr("repeat of string ="+k.repeat(2))
+        getstr("replace of string ="+k.replace('su','swamy'))
+    </script>
+</body>
+</html>

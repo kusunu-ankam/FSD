@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+        .equal{
+            background-color: orange;
+        
+        }
+        td:not(#result_id){
+            cursor: pointer;
+        }
+        #result_id{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>calculator</h1>
+    <center>
+    <table border="">
+        <tr>
+            <td colspan="4" id="result_id"></td>
+            
+        </tr>
+        <tr>
+            <td  onclick="getnum('9')">9</td>
+            <td  onclick="getnum('8')">8</td>
+            <td  onclick="getnum('7')">7</td>
+            <td  onclick="getnum('/')">/</td>
+        </tr>
+        <tr>
+            <td  onclick="getnum('6')">6</td>
+            <td  onclick="getnum('5')">5</td>
+            <td  onclick="getnum('4')">4</td>
+            <td  onclick="getnum('*')">*</td>
+        </tr>
+        <tr>
+            <td  onclick="getnum('3')">3</td>
+            <td  onclick="getnum('2')">2</td>
+            <td  onclick="getnum('1')">1</td>
+            <td onclick="getnum('-')">-</td>
+        </tr>
+        <tr>
+            <td  onclick="getnum('9')">0</td>
+            <td  onclick="clearall()">c</td>
+            <td  onclick="getnum('=')" class="equal">=</td>
+            <td  onclick="getnum('+')">+</td>
+        </tr>
+    </table>
+    </center>
+    <script>
+
+       function getnum(val) {
+        if(val=="="){
+            var res=document.getElementById('result_id').innerText;
+            document.getElementById('result_id').innerText =eval(res)
+        }
+        else{
+            document.getElementById('result_id').innerText +=val;
+        }
+       }
+       function clearall() {
+        document.getElementById('result_id').innerText="";
+       }
+    </script>
+</body>
+</html>
